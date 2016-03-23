@@ -19,5 +19,21 @@ original String
 
 char * get_sub_string(char *str, int i, int j){
 
-    return NULL;
+	//creating new string
+	char *substr;
+	substr = (char *)malloc(15 * sizeof(char));
+	int l = 0;
+
+	//if string is NULL return NULL
+	if (str == NULL || i > j)
+		return NULL;
+
+	//store str[i-j] in substr
+	for (int k = i; k <= j; k++)
+	{
+		substr[l++] = str[k];
+	}
+	substr[l] = '\0';
+
+	return substr;
 }
